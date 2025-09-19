@@ -51,6 +51,15 @@ DMR_BASE_MODEL="ai/gemma3"
 
 ## Usage
 
+### Dagger Module Functions
+
+This project includes a Dagger module with the following functions:
+
+- **`container-echo`** - Returns a container that echoes a string argument
+- **`grep-dir`** - Searches for patterns in files within a directory
+
+For detailed usage examples and commands, see [Commands.md](Commands.md).
+
 ### Test the Configuration
 
 1. **Check which model Dagger will use:**
@@ -86,6 +95,7 @@ dagger -c 'llm | with-prompt "Explain what Docker is" | last-reply'
 ## Troubleshooting
 
 ### Model Not Found
+
 ```powershell
 # Check available models
 docker model ls
@@ -95,11 +105,13 @@ docker model pull ai/gemma3
 ```
 
 ### Connection Issues
+
 - Ensure Docker Desktop is running with Model Runner enabled
 - Verify the `.env` file is in your working directory
 - Check that `OPENAI_BASE_URL` uses `model-runner.docker.internal` (for container access)
 
 ### Dagger Issues
+
 ```powershell
 # Check Dagger version
 dagger version

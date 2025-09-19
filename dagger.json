@@ -1,0 +1,8 @@
+{
+  "name": "my-module",
+  "engineVersion": "v0.18.19-250917100059-a4575200deba",
+  "sdk": {
+    "source": "python"
+  },
+  "source": ".dagger"
+}
